@@ -1,0 +1,7 @@
+base     hacker
+name     Hacker.css
+desc     Thème minimaliste style terminal (vert sur noir) avec toutes les fonctionnalités DokuWiki.
+author   Lionel PLAIS
+email    lionel.plais@ilp-web.net
+date     2025-02-01
+url      https://www.dokuwiki.org/template:hacker

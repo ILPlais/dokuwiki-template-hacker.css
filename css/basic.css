@@ -1,0 +1,494 @@
+/*
+ * Hacker Style CSS
+ */
+
+html {
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+html,
+body {
+	background-color: __background__;
+	color: __text__;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font:
+		'Courier New', 
+		Courier, 
+		monospace;
+	-webkit-text-size-adjust: 100%;
+}
+
+/*____________ HEADERS ____________*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	color: __text_neu__;
+	background-color: inherit;
+	padding: 0;
+	line-height: 1.2;
+	clear: left;
+	text-shadow: 0 0 5px __background_neu__;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+	clear: right;
+}
+
+h1 {
+	font-size: 2.25em;
+	margin: 0 0 0.444em;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 0 0 0.666em;
+}
+
+h3 {
+	font-size: 1.125em;
+	margin: 0 0 0.888em;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0 0 1em;
+}
+
+h5 {
+	font-size: 0.875em;
+	margin: 0 0 1.1428em;
+}
+
+h6 {
+	font-size: 0.75em;
+	margin: 0 0 1.333em;
+}
+
+caption,
+figcaption,
+summary,
+legend {
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2;
+	padding: 0;
+	margin: 0 0 0.35em;
+}
+
+/*____________ Basic margins and paddings ____________*/
+
+p,
+ul,
+ol,
+dl,
+pre,
+table,
+hr,
+blockquote,
+figure,
+details,
+fieldset,
+address {
+	margin: 0 0 1.4em 0;
+	padding: 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+/*____________ LISTS ____________*/
+
+ul,
+ol {
+	padding: 0 0 0 1.5em;
+}
+
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+	padding: 0 1.5em 0 0;
+}
+
+li,
+dd {
+	padding: 0;
+	margin: 0 0 0 1.5em;
+}
+
+[dir="rtl"] li,
+[dir="rtl"] dd {
+	margin: 0 1.5em 0 0;
+}
+
+dt {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+li ul,
+li ol,
+li dl,
+dl ul,
+dl ol,
+dl dl {
+	margin-bottom: 0;
+	padding: 0;
+}
+
+li li {
+	font-size: 100%;
+}
+
+ul {
+	list-style: disc outside;
+}
+
+ol {
+	list-style: decimal outside;
+}
+
+ol ol {
+	list-style-type: lower-alpha;
+}
+
+ol ol ol {
+	list-style-type: upper-roman;
+}
+
+ol ol ol ol {
+	list-style-type: upper-alpha;
+}
+
+ol ol ol ol ol {
+	list-style-type: lower-roman;
+}
+
+/*____________ TABLES ____________*/
+
+table {
+	border-collapse: collapse;
+	empty-cells: show;
+	border-spacing: 0;
+	color: __border__;
+	box-shadow: 0 0 10px __background_neu__;
+}
+
+caption {
+	caption-side: top;
+	text-align: left;
+}
+
+[dir="rtl"] caption {
+	text-align: right;
+}
+
+th,
+td {
+	padding: 0.3em 0.5em;
+	margin: 0;
+	vertical-align: top;
+	border: 1px solid __border__;
+}
+
+th {
+	font-weight: bold;
+	background-color: __background_alt__;
+	color: inherit;
+	text-align: left;
+}
+
+[dir="rtl"] th {
+	text-align: right;
+}
+
+/*____________ LINKS ____________*/
+a {
+	text-decoration: underline;
+}
+
+a:link,
+a:visited {
+	color: __link__;
+}
+
+a:link:hover,
+a:visited:hover,
+a:link:focus,
+a:visited:focus,
+a:link:active,
+a:visited:active {
+	text-decoration: underline;
+}
+
+a:link:focus,
+a:visited:focus {
+	outline: 1px dotted;
+}
+
+a:link:active,
+a:visited:active {
+	color: #c00;
+}
+
+/*____________ MISC ____________*/
+img,
+svg {
+	border-width: 0;
+	vertical-align: middle;
+	color: __text__;
+	background-color: transparent;
+	font-style: italic;
+}
+
+img,
+svg,
+object,
+embed,
+iframe,
+video,
+audio {
+	max-width: 100%;
+}
+
+img,
+svg,
+video {
+	height: auto;
+}
+
+iframe {
+	border-width: 0;
+	background-color: inherit;
+}
+
+button img,
+button svg {
+	max-width: none;
+}
+
+hr {
+	border-style: solid;
+	border-width: 1px 0 0;
+	text-align: center;
+	height: 0;
+	width: 100%;
+	clear: both;
+}
+
+acronym,
+abbr {
+	font-style: normal;
+}
+
+acronym[title],
+abbr[title] {
+	cursor: help;
+	border-bottom: 1px dotted;
+	text-decoration: none;
+}
+
+em acronym,
+em abbr {
+	font-style: italic;
+}
+
+mark {
+	background: __highlight__;
+	color: inherit;
+}
+
+pre,
+code,
+samp,
+kbd {
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1em;
+	background-color: __background_alt__;
+	color: __text__;
+	direction: ltr;
+	text-align: left;
+	padding: 10px;
+	border: 2px solid __border__;
+	border-radius: 5px;
+	overflow-x: auto;
+	display: block;
+}
+
+pre {
+	border: 2px solid __border__;
+	padding: 10px;
+	overflow: auto;
+	word-wrap: normal;
+}
+
+blockquote {
+	padding: 0 0.5em;
+	border: solid __border__;
+	border-width: 0 0 0 0.25em;
+}
+
+[dir="rtl"] blockquote {
+	border-width: 0 0.25em 0 0;
+}
+
+q:before,
+q:after {
+	content: "";
+}
+
+sub,
+sup {
+	font-size: 0.8em;
+	line-height: 1;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+}
+
+small {
+	font-size: 0.8em;
+}
+
+wbr {
+	display: inline-block;
+}
+
+/*____________ FORMS ____________*/
+
+form {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	padding: 0.7em 1em 0;
+	padding: 0.7rem 1rem;
+	border: 1px solid #999;
+}
+
+fieldset > :last-child {
+	margin-bottom: 0;
+}
+
+legend {
+	padding: 0 0.1em;
+}
+
+label {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select,
+optgroup,
+option,
+keygen,
+output,
+meter,
+progress {
+	font-family: 'Courier New', Courier, monospace;
+	color: __text__;
+	background-color: __background__;
+	border: 2px solid __border__;
+	line-height: normal;
+	margin: 0;
+	margin-bottom: 15px;
+	vertical-align: middle;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	border-radius: 5px;
+}
+
+input,
+button,
+select,
+keygen,
+textarea {
+	padding: 0.1em;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="image"],
+input.check {
+	padding: 0;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input.button,
+button {
+	cursor: pointer;
+	overflow: visible;
+	padding: 0.1em 0.4em;
+}
+
+input[disabled],
+button[disabled],
+select[disabled],
+textarea[disabled],
+option[disabled],
+input[readonly],
+button[readonly],
+select[readonly],
+textarea[readonly] {
+	cursor: auto;
+	opacity: 0.5;
+}
+
+input:focus,
+button:focus,
+select:focus,
+keygen:focus,
+textarea:focus {
+	border-color: __text_alt__;
+	box-shadow: 0 0 15px __text_alt__;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+select {
+	max-width: 100%;
+}
+
+optgroup {
+	font-style: italic;
+	font-weight: bold;
+}
+
+option {
+	font-style: normal;
+	font-weight: normal;
+}
