@@ -3,7 +3,7 @@
 /**
  * DokuWiki Hacker Template: Image Detail Page
  *
- * @link     https://dokuwiki.org/template:hacker
+ * @link     https://www.dokuwiki.org/template:hacker.css
  * @author   Lionel PLAIS <lionel.plais@ilp-web.net>
  * @license  MIT License (https://opensource.org/license/MIT)
  */
@@ -38,7 +38,10 @@ if (!defined('DOKU_INC')) die();
 			document.documentElement
 		);
 	</script>
-	<?php tpl_metaheaders() ?>
+	<?php
+		tpl_metaheaders();
+		_tpl_font_headers();
+	?>
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
 	<?php
 		$favicon = tpl_favicon(array(

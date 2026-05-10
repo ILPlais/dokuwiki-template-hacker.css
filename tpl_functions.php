@@ -11,6 +11,38 @@
 // Must be run within DokuWiki
 if (!defined('DOKU_INC')) die();
 
+/**
+ * Font-family stack and @font-face stylesheet for the template font setting (conf/metadata.php).
+ *
+ * @return array{sheet:string,stack:string}
+ */
+function _tpl_font_config() {
+	$key = tpl_getConf('font');
+	$configs = array(
+		'firacode' => array(
+			'sheet' => 'assets/nerd-fonts/firacode.css',
+			'stack' => '"FiraCode Nerd Font Mono", "FiraCode Nerd Font", "Courier New", Courier, monospace',
+		),
+		'bigblueterminal' => array(
+			'sheet' => 'assets/nerd-fonts/bigblueterminal.css',
+			'stack' => '"BigBlueTerm437 Nerd Font Mono", "BigBlueTermPlus Nerd Font Mono", "Courier New", Courier, monospace',
+		),
+	);
+	return isset($configs[$key]) ? $configs[$key] : $configs['firacode'];
+}
+
+/**
+ * Loads the glyph @font-face sheet and outputs font-family rules (after tpl_metaheaders()).
+ */
+function _tpl_font_headers() {
+	$cfg = _tpl_font_config();
+	echo '<link rel="stylesheet" href="' . hsc(tpl_basedir() . $cfg['sheet']) . '" />' . "\n\t\t";
+	echo '<style type="text/css">' . "\n\t\t\t" . '/* theme font from template conf */' . "\n\t\t\t"
+		. 'body, input, textarea, select, button, .hacker-button, pre, code, kbd, samp,' . "\n\t\t\t"
+		. '#mediamanager__page h2, #mediamanager__page h3 { font-family: ' . $cfg['stack'] . '; }'
+		. "\n\t\t</style>";
+}
+
 function _tpl_usertools() {
 	/* The optional second parameter of tpl_action() switches between a link and a button,
 	 e.g. a button inside a <li> would be: tpl_action('edit', 0, 'li') */

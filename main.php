@@ -2,7 +2,7 @@
 /**
  * DokuWiki Hacker Template: Main Page
  *
- * @link     https://dokuwiki.org/template:hacker
+ * @link     https://www.dokuwiki.org/template:hacker.css
  * @author   Lionel PLAIS <lionel.plais@ilp-web.net>
  * @license  MIT License (https://opensource.org/license/MIT)
  */
@@ -41,13 +41,18 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
 				document.documentElement
 			)
 		</script>
+		<!-- TEMPLATE HEADERS -->
 		<?php
 			tpl_metaheaders();
+			_tpl_font_headers();
 		?>
+		<!-- /TEMPLATE HEADERS -->
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<!-- FAVICON -->
 		<?php
 			echo tpl_favicon(array('favicon', 'mobile'));
 		?>
+		<!-- /FAVICON -->
 		<?php
 			tpl_includeFile('meta.html')
 		?>
@@ -90,7 +95,7 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
 
 								tpl_link(
 									wl(),
-									'<img src="' . $logo . '" ' . ($logoSize ? $logoSize[3] : '') . ' alt="" />' .
+									'<img src="' . $logo . '" ' . ($logoSize ? $logoSize[3] : '') . ' alt="Logo" style="box-shadow: none;" />' .
 									'<span>' . $conf['title'] . '</span>',
 									'accesskey="h" title="' . tpl_getLang('home') . '[H]"');
 							?>

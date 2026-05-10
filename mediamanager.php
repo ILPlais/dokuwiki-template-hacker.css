@@ -1,6 +1,6 @@
 <?php
 /**
- * okuWiki Hacker Template: Media Manager Popup
+ * DokuWiki Hacker Template: Media Manager Popup
  *
  * @link     https://dokuwiki.org/template:hacker
  * @author   Lionel PLAIS <lionel.plais@ilp-web.net>
@@ -40,6 +40,7 @@ if (!defined('DOKU_INC')) die();
 		</script>
 		<?php
 			tpl_metaheaders();
+			_tpl_font_headers();
 		?>
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<?php
