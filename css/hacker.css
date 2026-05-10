@@ -200,6 +200,21 @@ img.icon.smiley {
 	box-shadow: none;
 }
 
+button.toolbutton, button.pickerbutton {
+	box-shadow: none;
+	padding: 5px;
+}
+
+button.toolbutton img, button.pickerbutton img {
+	box-shadow: none;
+	border: none;
+}
+
+li.media img {
+	box-shadow: none;
+	border: none;
+}
+
 #config__manager {
 	input, textarea, select {
 		color: __text_alt__;
