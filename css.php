@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * DokuWiki Hacker Template: CSS Asset
  *

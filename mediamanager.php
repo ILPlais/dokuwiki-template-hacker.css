@@ -2,7 +2,7 @@
 /**
  * DokuWiki Hacker Template: Media Manager Popup
  *
- * @link     https://dokuwiki.org/template:hacker
+ * @link     https://dokuwiki.org/template:hacker.css
  * @author   Lionel PLAIS <lionel.plais@ilp-web.net>
  * @license  MIT License (https://opensource.org/license/MIT)
  */

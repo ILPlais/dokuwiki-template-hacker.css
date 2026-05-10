@@ -1,5 +1,4 @@
 <?php
-
 /**
  * DokuWiki Hacker Template: Image Detail Page
  *
