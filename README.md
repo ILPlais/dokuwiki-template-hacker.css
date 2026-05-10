@@ -24,6 +24,10 @@ Minimalist terminal-style theme (green on black) for DokuWiki, preserving all fe
 
 After selecting the template, you can customize it by choosing a font from those offered by Nerd Fonts. To do this, go to the "Template/Hacker" section and select the main font.
 
+## Screenshot
+
+![Screenshot](/asset/screenshot.png)
+
 ## Sources
 
 ### Hacker.css
