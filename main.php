@@ -212,13 +212,9 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
 				<?php
 					if ($showSidebar):
 				?>
-				<<?php
-					echo $sidebarElement;
-				?>
+				<<?php echo $sidebarElement; ?>
 					id="dokuwiki__aside"
-					aria-label="<?php
-						echo $lang['sidebar'];
-					?>">
+					aria-label="<?php echo $lang['sidebar']; ?>">
 
 						<div class="pad aside include group">
 							<?php
@@ -234,9 +230,7 @@ $sidebarElement = tpl_getConf('sidebarIsNav') ? 'nav' : 'aside';
 							<div class="clearer"></div>
 						</div>
 
-						</<?php
-							echo $sidebarElement;
-						?>>
+						</<?php echo $sidebarElement; ?>>
 						<!-- /ASIDE -->
 						<?php endif; ?>
 
