@@ -26,7 +26,7 @@ After selecting the template, you can customize it by choosing a font from those
 
 ## Screenshot
 
-![Screenshot](/asset/screenshot.png)
+![Screenshot](/assets/screenshot.png)
 
 ## Sources
 
