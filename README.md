@@ -2,6 +2,8 @@
 
 Minimalist terminal-style theme (green on black) for DokuWiki, preserving all features of the default theme.
 
+This template can be found at https://www.dokuwiki.org/template:hacker.css
+
 ## Theme Files
 
 - [`main.php`](main.php) — main template (pages, editing, search, etc.)
@@ -15,6 +17,16 @@ Minimalist terminal-style theme (green on black) for DokuWiki, preserving all fe
 - [`lang/`](lang/) — localization files used by the template
 
 ## Installation
+
+### Via the Extensions Manager (easy)
+
+The easiest way to install the template is:
+1. Use the Extensions Manager in the admin panel;
+2. Simply search for "hacker.css" and click "Install";
+3. Then, go to the configuration page;
+4. Select "hacker.css" from the template dropdown menu.
+
+### Manually (less easy)
 
 1. Copy the contents of this repository into `lib/tpl/hacker/` of your DokuWiki installation (the folder must be named `hacker`).
 2. In DokuWiki: **Configuration Manager** → **Customization** → **Template** → select **Hacker**.
