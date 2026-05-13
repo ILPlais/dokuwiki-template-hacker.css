@@ -45,7 +45,7 @@ function _tpl_font_config() {
 		),
 		'bigblueterminal' => array(
 			'sheet' => 'bigblueterminal.css',
-			'stack' => '"BigBlueTerminalPlus Nerd Font Mono", "BigBlueTerminalPlus Nerd Font", monospace',
+			'stack' => '"BigBlueTermPlus Nerd Font Mono", "BigBlueTermPlus Nerd Font", monospace',
 		),
 		'bigblueterminal437' => array(
 			'sheet' => 'bigblueterm437-nerd-font.css',
