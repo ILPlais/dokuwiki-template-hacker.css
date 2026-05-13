@@ -2,6 +2,8 @@
 
 Minimalist terminal-style theme (green on black) for DokuWiki, preserving all features of the default theme.
 
+This template can be found at https://www.dokuwiki.org/template:hacker.css
+
 ## Theme Files
 
 - [`main.php`](main.php) — main template (pages, editing, search, etc.)
