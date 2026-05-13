@@ -3,5 +3,5 @@ name     Hacker.css
 desc     A minimalist terminal-style theme (green on black) with all DokuWiki features.
 author   Lionel PLAIS
 email    lionel.plais@ilp-web.net
-date     2026-05-10
+date     2026-05-13
 url      https://www.dokuwiki.org/template:hacker.css
