@@ -239,3 +239,9 @@ li.media img {
 		background-color: __background_neu__;
 	}
 }
+
+/* Code */
+code[class*"language-"],
+pre[class*"language-"] {
+	border: none;
+}

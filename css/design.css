@@ -155,6 +155,8 @@
 	border-bottom: 1px solid __border__;
 	background-color: __background_alt__;
 	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #dokuwiki__usertools ul,
@@ -185,6 +187,8 @@
 	background-color: __background_alt__;
 	width: 100%;
 	z-index: 10;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #dokuwiki__pagetools ul li {
@@ -297,10 +301,6 @@
 
 #dokuwiki__footer {
 	margin-bottom: 1em;
-}
-
-#dokuwiki__footer .doc {
-	float: left;
 }
 
 #dokuwiki__footer .top {
