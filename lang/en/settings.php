@@ -6,6 +6,9 @@
 
 $lang['hideTools']                    = 'Hide tools when not logged in?';
 $lang['sidebarIsNav']                 = 'Is the sidebar mainly used for navigation?';
+$lang['cdn']                          = 'Content Delivery Network';
+$lang['cdn_o_github']                 = 'GitHub';
+$lang['cdn_o_jsdelivr']               = 'jsDelivr';
 $lang['font']                         = 'Main font';
 $lang['font_o_0xproto']               = '0xProto Nerd Font';
 $lang['font_o_3270']                  = '3270 Nerd Font';
@@ -13,8 +16,10 @@ $lang['font_o_agave']                 = 'Agave Nerd Font';
 $lang['font_o_anonymouspro']          = 'AnonymousPro Nerd Font';
 $lang['font_o_arimo']                 = 'Arimo Nerd Font';
 $lang['font_o_aurulentsansmono']      = 'AurulentSansMono Nerd Font';
-$lang['font_o_bigblueterminal']       = 'BigBlueTerminal Nerd Font';
+$lang['font_o_bigblueterminal']       = 'BigBlueTerminalPlus Nerd Font';
+$lang['font_o_bigblueterm437']        = 'BigBlueTerminal437 Nerd Font';
 $lang['font_o_bitstreamverasansmono'] = 'BitstreamVeraSansMono Nerd Font';
+$lang['font_o_blexmono']              = 'BitstreamVeraSansMono Nerd Font';
 $lang['font_o_cascadiacode']          = 'CascadiaCode Nerd Font';
 $lang['font_o_cascadiamono']          = 'CascadiaMono Nerd Font';
 $lang['font_o_codenewroman']          = 'CodeNewRoman Nerd Font';
