@@ -19,13 +19,285 @@ if (!defined('DOKU_INC')) die();
 function _tpl_font_config() {
 	$key = tpl_getConf('font');
 	$configs = array(
-		'firacode' => array(
-			'sheet' => 'assets/nerd-fonts/firacode.css',
-			'stack' => '"FiraCode Nerd Font Mono", "FiraCode Nerd Font", "Courier New", Courier, monospace',
+		'0xproto' => array(
+			'sheet' => '0xproto.css',
+			'stack' => '"0xProto Nerd Font Mono", "0xProto Nerd Font", monospace',
+		),
+		'3270' => array(
+			'sheet' => '3270.css',
+			'stack' => '"3270 Nerd Font Mono", "3270 Nerd Font", monospace',
+		),
+		'agave' => array(
+			'sheet' => 'agave.css',
+			'stack' => '"Agave Nerd Font Mono", "Agave Nerd Font", monospace',
+		),
+		'anonymouspro' => array(
+			'sheet' => 'anonymouspro.css',
+			'stack' => '"AnonymousPro Nerd Font Mono", "AnonymousPro Nerd Font", monospace',
+		),
+		'arimo' => array(
+			'sheet' => 'arimo.css',
+			'stack' => '"Arimo Nerd Font Mono", "Arimo Nerd Font", monospace',
+		),
+		'aurulentsansmono' => array(
+			'sheet' => 'aurulentsansmono.css',
+			'stack' => '"AurulentSansMono Nerd Font Mono", "AurulentSansMono Nerd Font", monospace',
 		),
 		'bigblueterminal' => array(
-			'sheet' => 'assets/nerd-fonts/bigblueterminal.css',
-			'stack' => '"BigBlueTerm437 Nerd Font Mono", "BigBlueTermPlus Nerd Font Mono", "Courier New", Courier, monospace',
+			'sheet' => 'bigblueterminal.css',
+			'stack' => '"BigBlueTerminalPlus Nerd Font Mono", "BigBlueTerminalPlus Nerd Font", monospace',
+		),
+		'bigblueterminal437' => array(
+			'sheet' => 'bigblueterm437-nerd-font.css',
+			'stack' => '"BigBlueTerm437 Nerd Font Mono", "BigBlueTerm437 Nerd Font", monospace',
+		),
+		'bitstreamverasansmono' => array(
+			'sheet' => 'bitstreamverasansmono.css',
+			'stack' => '"BitstromWera Nerd Font Mono", "BitstromWera Nerd Font", monospace',
+		),
+		'blexmono' => array(
+			'sheet' => 'blexmono-nerd-font-mono.css',
+			'stack' => '"BlexMono Nerd Font", "BlexMono Nerd Font", monospace',
+		),
+		'cascadiacode' => array(
+			'sheet' => 'cascadiacode.css',
+			'stack' => '"CaskaydiaCove NF", monospace',
+		),
+		'cascadiamono' => array(
+			'sheet' => 'cascadiamono.css',
+			'stack' => '"CaskaydiaMono NF", monospace',
+		),
+		'codenewroman' => array(
+			'sheet' => 'codenewroman.css',
+			'stack' => '"CodeNewRoman Nerd Font Mono", "CodeNewRoman Nerd Font", monospace',
+		),
+		'comicshannsmono' => array(
+			'sheet' => 'comicshannsmono.css',
+			'stack' => '"ComicShannsMono Nerd Font Mono", "ComicShannsMono Nerd Font", monospace',
+		),
+		'commitmono' => array(
+			'sheet' => 'commitmono.css',
+			'stack' => '"CommitMono Nerd Font Mono", "CommitMono Nerd Font", monospace',
+		),
+		'cousine' => array(
+			'sheet' => 'cousine.css',
+			'stack' => '"Cousine Nerd Font Mono", "Cousine Nerd Font", monospace',
+		),
+		'd2coding' => array(
+			'sheet' => 'd2coding.css',
+			'stack' => '"D2CodingLigature Nerd Font Mono", "D2CodingLigature Nerd Font", monospace',
+		),
+		'daddytimemono' => array(
+			'sheet' => 'daddytimemono.css',
+			'stack' => '"DaddyTimeMono Nerd Font Mono", "DaddyTimeMono Nerd Font", monospace',
+		),
+		'dejavusansmono' => array(
+			'sheet' => 'dejavusansmono.css',
+			'stack' => '"DejaVuSansM Nerd Font Mono", "DejaVuSansM Nerd Font", monospace',
+		),
+		'departuremono' => array(
+			'sheet' => 'departuremono.css',
+			'stack' => '"DepartureMono Nerd Font Mono", "DepartureMono Nerd Font", monospace',
+		),
+		'droidsansmono' => array(
+			'sheet' => 'droidsansmono.css',
+			'stack' => '"DroidSansM Nerd Font Mono", "DroidSansM Nerd Font", monospace',
+		),
+		'envycoder' => array(
+			'sheet' => 'envycoder.css',
+			'stack' => '"EnvyCodeR Nerd Font Mono", "EnvyCodeR Nerd Font", monospace',
+		),
+		'fantasquesansmono' => array(
+			'sheet' => 'fantasquesansmono.css',
+			'stack' => '"FantasqueSansM Nerd Font Mono", "FantasqueSansM Nerd Font", monospace',
+		),
+		'firacode' => array(
+			'sheet' => 'firacode.css',
+			'stack' => '"FiraCode Nerd Font Mono", "FiraCode Nerd Font", monospace',
+		),
+		'firamono' => array(
+			'sheet' => 'firamono.css',
+			'stack' => '"FiraMono Nerd Font Mono", "FiraMono Nerd Font", monospace',
+		),
+		'geistmono' => array(
+			'sheet' => 'geistmono.css',
+			'stack' => '"GeistMono Nerd Font Mono", "GeistMono Nerd Font", monospace',
+		),
+		'gohu' => array(
+			'sheet' => 'gohu.css',
+			'stack' => '"GohuFont 11 Nerd Font Mono", "GohuFont 11 Nerd Font", monospace',
+		),
+		'go-mono' => array(
+			'sheet' => 'go-mono.css',
+			'stack' => '"Go-Mono Nerd Font Mono", "Go-Mono Nerd Font", monospace',
+		),
+		'hack' => array(
+			'sheet' => 'hack.css',
+			'stack' => '"Hack Nerd Font Mono", "Hack Nerd Font", monospace',
+		),
+		'hasklig' => array(
+			'sheet' => 'hasklig.css',
+			'stack' => '"Hasklug Nerd Font Mono", "Hasklug Nerd Font", monospace',
+		),
+		'heavydata' => array(
+			'sheet' => 'heavydata.css',
+			'stack' => '"HeavyData Nerd Font", fantasy',
+		),
+		'hermit' => array(
+			'sheet' => 'hermit.css',
+			'stack' => '"Hurmit Nerd Font Mono", "Hurmit Nerd Font", monospace',
+		),
+		'ia-writer' => array(
+			'sheet' => 'ia-writer.css',
+			'stack' => '"iMWritingDuo Nerd Font Mono", "iMWritingDuo Nerd Font", monospace',
+		),
+		'ibmplexmono' => array(
+			'sheet' => 'ibmplexmono.css',
+			'stack' => '"BlexMono Nerd Font Mono", "BlexMono Nerd Font", monospace',
+		),
+		'inconsolata' => array(
+			'sheet' => 'inconsolata.css',
+			'stack' => '"Inconsolata Nerd Font Mono", "Inconsolata Nerd Font", monospace',
+		),
+		'inconsolatago' => array(
+			'sheet' => 'inconsolatago.css',
+			'stack' => '"InconsolataGo Nerd Font Mono", "InconsolataGo Nerd Font", monospace',
+		),
+		'inconsolatalgc' => array(
+			'sheet' => 'inconsolatalgc.css',
+			'stack' => '"Inconsolata LGC Nerd Font Mono", "Inconsolata LGC Nerd Font", monospace',
+		),
+		'intelonemono' => array(
+			'sheet' => 'intelonemono.css',
+			'stack' => '"IntoneMono NF", monospace',
+		),
+		'iosevka' => array(
+			'sheet' => 'iosevka.css',
+			'stack' => '"Iosevka NFM", "Iosevka NF", monospace',
+		),
+		'iosevkaterm' => array(
+			'sheet' => 'iosevkaterm.css',
+			'stack' => '"IosevkaTerm NFM", "IosevkaTerm NF", monospace',
+		),
+		'iosevkatermslab' => array(
+			'sheet' => 'iosevkatermslab.css',
+			'stack' => '"IosevkaTermSlab NFM", "IosevkaTermSlab NF", monospace',
+		),
+		'jetbrainsmono' => array(
+			'sheet' => 'jetbrainsmono.css',
+			'stack' => '"JetBrainsMonoNL NFM", "JetBrainsMonoNL NF", monospace',
+		),
+		'lekton' => array(
+			'sheet' => 'lekton.css',
+			'stack' => '"Lekton Nerd Font Mono", "Lekton Nerd Font", monospace',
+		),
+		'liberationmono' => array(
+			'sheet' => 'liberationmono.css',
+			'stack' => '"LiberationMono Nerd Font Mono", "LiberationMono Nerd Font", monospace',
+		),
+		'lilex' => array(
+			'sheet' => 'lilex.css',
+			'stack' => '"Lilex Nerd Font Mono", "Lilex Nerd Font", monospace',
+		),
+		'mplus' => array(
+			'sheet' => 'mplus.css',
+			'stack' => '"M+1Code Nerd Font Mono", "M+1Code Nerd Font", monospace',
+		),
+		'martianmono' => array(
+			'sheet' => 'martianmono.css',
+			'stack' => '"MartianMono NFM", "MartianMono NF", monospace',
+		),
+		'meslo' => array(
+			'sheet' => 'meslo.css',
+			'stack' => '"MesloLGLDZ Nerd Font Mono", "MesloLGLDZ Nerd Font Font", monospace',
+		),
+		'monaspace' => array(
+			'sheet' => 'monaspace.css',
+			'stack' => '"MonaspiceAr Nerd Font Mono", "MonaspiceAr Nerd Font", monospace',
+		),
+		'monofur' => array(
+			'sheet' => 'monofur.css',
+			'stack' => '"Monofur Nerd Font Mono", "Monofur Nerd Font", monospace',
+		),
+		'monoid' => array(
+			'sheet' => 'monoid.css',
+			'stack' => '"Monoid Nerd Font Mono", "Monoid Nerd Font", monospace',
+		),
+		'mononoki' => array(
+			'sheet' => 'mononoki.css',
+			'stack' => '"Mononoki Nerd Font Mono", "Mononoki Nerd Font", monospace',
+		),
+		'nerdfontssymbolsonly' => array(
+			'sheet' => 'nerdfontssymbolsonly.css',
+			'stack' => '"Symbols Nerd Font Mono", "Symbols Nerd Font", monospace',
+		),
+		'noto' => array(
+			'sheet' => 'noto.css',
+			'stack' => '"NotoMono NFM", "NotoMono NF", monospace',
+		),
+		'opendyslexic' => array(
+			'sheet' => 'opendyslexic.css',
+			'stack' => '"OpenDyslexicM Nerd Font Mono", "OpenDyslexicM Nerd Font", monospace',
+		),
+		'overpass' => array(
+			'sheet' => 'overpass.css',
+			'stack' => '"OverpassM Nerd Font Mono", "OverpassM Nerd Font", monospace',
+		),
+		'profont' => array(
+			'sheet' => 'profont.css',
+			'stack' => '"ProFont IIx Nerd Font Mono", "ProFont IIx Nerd Font", monospace',
+		),
+		'proggyclean' => array(
+			'sheet' => 'proggyclean.css',
+			'stack' => '"ProggyClean Nerd Font Mono", "ProggyClean Nerd Font", monospace',
+		),
+		'recursive' => array(
+			'sheet' => 'recursive.css',
+			'stack' => '"RecMonoCasual Nerd Font Mono", "RecMonoCasual Nerd Font", monospace',
+		),
+		'robotomono' => array(
+			'sheet' => 'robotomono.css',
+			'stack' => '"RobotoMono Nerd Font Mono", "RobotoMono Nerd Font", monospace',
+		),
+		'sharetechmono' => array(
+			'sheet' => 'sharetechmono.css',
+			'stack' => '"ShureTechMono Nerd Font Mono", "ShureTechMono Nerd Font", monospace',
+		),
+		'sourcecodepro' => array(
+			'sheet' => 'sourcecodepro.css',
+			'stack' => '"SauceCodePro NFM", "SauceCodePro NF", monospace',
+		),
+		'spacemono' => array(
+			'sheet' => 'spacemono.css',
+			'stack' => '"SpaceMono Nerd Font Mono", "SpaceMono Nerd Font", monospace',
+		),
+		'terminus' => array(
+			'sheet' => 'terminus.css',
+			'stack' => '"Terminess Nerd Font Mono", "Terminess Nerd Font", monospace',
+		),
+		'tinos' => array(
+			'sheet' => 'tinos.css',
+			'stack' => '"Tinos Nerd Font", serif',
+		),
+		'ubuntu' => array(
+			'sheet' => 'ubuntu.css',
+			'stack' => '"Ubuntu Nerd Font", sans-serif',
+		),
+		'ubuntumono' => array(
+			'sheet' => 'ubuntumono.css',
+			'stack' => '"UbuntuMono Nerd Font Mono", "UbuntuMono Nerd Font", monospace',
+		),
+		'ubuntusans' => array(
+			'sheet' => 'ubuntusans.css',
+			'stack' => '"UbuntuSansMono NFM", "UbuntuSansMono NF", monospace',
+		),
+		'victormono' => array(
+			'sheet' => 'victormono.css',
+			'stack' => '"VictorMono NFM", "VictorMono NF", monospace',
+		),
+		'zedmono' => array(
+			'sheet' => 'zedmono.css',
+			'stack' => '"ZedMono NFM", "ZedMono NF", monospace',
 		),
 	);
 	return isset($configs[$key]) ? $configs[$key] : $configs['firacode'];
@@ -36,11 +308,36 @@ function _tpl_font_config() {
  */
 function _tpl_font_headers() {
 	$cfg = _tpl_font_config();
-	echo '<link rel="stylesheet" href="' . hsc(tpl_basedir() . $cfg['sheet']) . '" />' . "\n\t\t";
-	echo '<style type="text/css">' . "\n\t\t\t" . '/* theme font from template conf */' . "\n\t\t\t"
-		. 'body, input, textarea, select, button, .hacker-button, pre, code, kbd, samp,' . "\n\t\t\t"
-		. '#mediamanager__page h2, #mediamanager__page h3 { font-family: ' . $cfg['stack'] . '; }'
-		. "\n\t\t</style>";
+	$cdn = tpl_getConf('cdn');
+
+	switch ($cdn) {
+		case 'github':
+			$cdn_url = 'https://mshaugh.github.io/nerdfont-webfonts/build/';
+			break;
+		case 'jsdelivr':
+			$cdn_url = 'https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts/build/';
+			break;
+		default:
+			// We're not supposed to end up here
+			$cdn_url = tpl_basedir() . 'assets/nerd-fonts/';
+			break;
+	}
+
+	echo '<link rel="stylesheet" href="' . hsc($cdn_url . $cfg['sheet']) . '" />' . PHP_EOL;
+	echo '<style type="text/css">' . PHP_EOL
+		. 'body,' . PHP_EOL
+		. 'input,' . PHP_EOL
+		. 'textarea,' . PHP_EOL
+		. 'select,' . PHP_EOL 
+		. 'button,' . PHP_EOL
+		. '.hacker-button,' . PHP_EOL
+		. 'pre,' . PHP_EOL
+		. 'code,' . PHP_EOL
+		. 'kbd, samp,' . PHP_EOL
+		. '#mediamanager__page h2,' . PHP_EOL
+		. '#mediamanager__page h3' . PHP_EOL
+		. '{ font-family: ' . $cfg['stack'] . '; }' . PHP_EOL
+		. "</style>";
 }
 
 function _tpl_usertools() {
