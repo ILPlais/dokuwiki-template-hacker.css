@@ -240,8 +240,8 @@ li.media img {
 	}
 }
 
-/* Code */
-code[class*"language-"],
-pre[class*"language-"] {
+/* CodePrism */
+pre[class*="dokuwiki-plugin-codeprism"] code {
 	border: none;
+	padding: unset;
 }
