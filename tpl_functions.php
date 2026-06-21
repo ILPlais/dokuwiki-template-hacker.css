@@ -304,25 +304,53 @@ function _tpl_font_config() {
 }
 
 /**
+ * Filesystem path to this template directory (trailing slash).
+ *
+ * @return string
+ */
+function _tpl_fsdir() {
+	return dirname(__FILE__) . '/';
+}
+
+/**
+ * Return a DokuWiki HTTP client when available (compatible with old and new cores).
+ *
+ * @return \dokuwiki\HTTP\DokuHTTPClient|DokuHTTPClient|null
+ */
+function _tpl_http_client() {
+	if (class_exists('\\dokuwiki\\HTTP\\DokuHTTPClient')) {
+		return new \dokuwiki\HTTP\DokuHTTPClient();
+	}
+	if (class_exists('DokuHTTPClient')) {
+		return new DokuHTTPClient();
+	}
+	$legacy = DOKU_INC . 'inc/HTTPClient.php';
+	if (is_readable($legacy)) {
+		require_once $legacy;
+		return new DokuHTTPClient();
+	}
+	return null;
+}
+
+/**
  * Download missing .woff2 files for the selected font (local CDN mode only).
  *
  * Only fetches the files referenced by the active @font-face sheet (~few MB),
  * not the full Nerd Fonts bundle.
  */
 function _tpl_ensure_local_fonts($sheet) {
-	$css_path = tpl_incdir() . 'assets/nerd-fonts/' . $sheet;
+	$css_path = _tpl_fsdir() . 'assets/nerd-fonts/' . $sheet;
 	if (!is_readable($css_path)) return;
 
 	$css = file_get_contents($css_path);
 	if ($css === false || !preg_match_all('/url\("fonts\/([^"]+\.woff2)"\)/', $css, $matches)) return;
 
-	$fonts_dir = tpl_incdir() . 'assets/nerd-fonts/fonts/';
+	$fonts_dir = _tpl_fsdir() . 'assets/nerd-fonts/fonts/';
+	if (!function_exists('io_mkdir_p') || !function_exists('io_saveFile')) return;
 	io_mkdir_p($fonts_dir);
 
-	if (!class_exists('DokuHTTPClient')) {
-		require_once(DOKU_INC . 'inc/HTTPClient.php');
-	}
-	$http = new DokuHTTPClient();
+	$http = _tpl_http_client();
+	if (!$http) return;
 	$http->timeout = 60;
 	$http->max_bodysize = 0;
 
