@@ -304,6 +304,41 @@ function _tpl_font_config() {
 }
 
 /**
+ * Download missing .woff2 files for the selected font (local CDN mode only).
+ *
+ * Only fetches the files referenced by the active @font-face sheet (~few MB),
+ * not the full Nerd Fonts bundle.
+ */
+function _tpl_ensure_local_fonts($sheet) {
+	$css_path = tpl_incdir() . 'assets/nerd-fonts/' . $sheet;
+	if (!is_readable($css_path)) return;
+
+	$css = file_get_contents($css_path);
+	if ($css === false || !preg_match_all('/url\("fonts\/([^"]+\.woff2)"\)/', $css, $matches)) return;
+
+	$fonts_dir = tpl_incdir() . 'assets/nerd-fonts/fonts/';
+	io_mkdir_p($fonts_dir);
+
+	if (!class_exists('DokuHTTPClient')) {
+		require_once(DOKU_INC . 'inc/HTTPClient.php');
+	}
+	$http = new DokuHTTPClient();
+	$http->timeout = 60;
+	$http->max_bodysize = 0;
+
+	$base_url = 'https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts/build/fonts/';
+	foreach (array_unique($matches[1]) as $file) {
+		$dest = $fonts_dir . $file;
+		if (is_file($dest) && filesize($dest) > 0) continue;
+
+		$data = $http->get($base_url . rawurlencode($file));
+		if ($data !== false && strlen($data) > 128) {
+			io_saveFile($dest, $data);
+		}
+	}
+}
+
+/**
  * Loads the glyph @font-face sheet and outputs font-family rules (after tpl_metaheaders()).
  */
 function _tpl_font_headers() {
@@ -318,6 +353,7 @@ function _tpl_font_headers() {
 			$stylesheet_url = 'https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts/build/' . $cfg['sheet'];
 			break;
 		case 'local':
+			_tpl_ensure_local_fonts($cfg['sheet']);
 			$stylesheet_url = tpl_basedir() . 'assets/nerd-fonts/' . $cfg['sheet'];
 			break;
 		default:

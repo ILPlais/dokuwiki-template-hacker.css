@@ -9,5 +9,5 @@ $lang['sidebarIsNav']     = 'La barre latérale est-elle principalement utilisé
 $lang['cdn']              = 'Réseau de diffusion de contenu (CDN)';
 $lang['cdn_o_github']     = 'GitHub';
 $lang['cdn_o_jsdelivr']   = 'jsDelivr';
-$lang['cdn_o_local']      = 'Local (inclus dans le template)';
+$lang['cdn_o_local']      = 'Local (mis en cache sur le serveur au premier usage)';
 $lang['font']             = 'Police de caractères principale';

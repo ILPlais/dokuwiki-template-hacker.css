@@ -1,0 +1,3 @@
+# Font binaries are cached on the server when CDN is set to "local".
+/assets/nerd-fonts/fonts/*
+!/assets/nerd-fonts/fonts/.gitkeep
