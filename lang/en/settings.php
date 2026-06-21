@@ -9,6 +9,7 @@ $lang['sidebarIsNav']                 = 'Is the sidebar mainly used for navigati
 $lang['cdn']                          = 'Content Delivery Network';
 $lang['cdn_o_github']                 = 'GitHub';
 $lang['cdn_o_jsdelivr']               = 'jsDelivr';
+$lang['cdn_o_local']                  = 'Local (bundled with template)';
 $lang['font']                         = 'Main font';
 $lang['font_o_0xproto']               = '0xProto Nerd Font';
 $lang['font_o_3270']                  = '3270 Nerd Font';

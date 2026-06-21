@@ -12,7 +12,7 @@ This template can be found at https://www.dokuwiki.org/template:hacker.css
 - [`style.ini`](style.ini) — CSS loading and placeholders for plugins
 - [`template.info.txt`](template.info.txt) — theme metadata
 - [`css/hacker.css`](css/hacker.css) — main stylesheet
-- [`assets/nerd-fonts/`](assets/nerd-fonts/) — CSS fonts files used by the template
+- [`assets/nerd-fonts/`](assets/nerd-fonts/) — CSS font files used by the template
 - [`assets/nerd-fonts/fonts/`](assets/nerd-fonts/fonts/) — font files used by the template
 - [`lang/`](lang/) — localization files used by the template
 
@@ -34,7 +34,12 @@ The easiest way to install the template is:
 
 ## Configuration
 
-After selecting the template, you can customize it by choosing a font from those offered by Nerd Fonts. To do this, go to the "Template/Hacker" section and select the main font.
+After selecting the template, you can customize it in the **Template/Hacker** section:
+
+- **CDN** — how font files are loaded:
+  - **Local** — fonts served from the template directory (works offline; default)
+  - **GitHub** or **jsDelivr** — fonts served from [Nerd Font Web Fonts](https://github.com/mshaugh/nerdfont-webfonts)
+- **Main font** — choose a Nerd Font family
 
 ## Screenshot
 

@@ -312,18 +312,20 @@ function _tpl_font_headers() {
 
 	switch ($cdn) {
 		case 'github':
-			$cdn_url = 'https://mshaugh.github.io/nerdfont-webfonts/build/';
+			$stylesheet_url = 'https://mshaugh.github.io/nerdfont-webfonts/build/' . $cfg['sheet'];
 			break;
 		case 'jsdelivr':
-			$cdn_url = 'https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts/build/';
+			$stylesheet_url = 'https://cdn.jsdelivr.net/gh/mshaugh/nerdfont-webfonts/build/' . $cfg['sheet'];
+			break;
+		case 'local':
+			$stylesheet_url = tpl_basedir() . 'assets/nerd-fonts/' . $cfg['sheet'];
 			break;
 		default:
-			// We're not supposed to end up here
-			$cdn_url = tpl_basedir() . 'assets/nerd-fonts/';
+			$stylesheet_url = tpl_basedir() . 'assets/nerd-fonts/' . $cfg['sheet'];
 			break;
 	}
 
-	echo '<link rel="stylesheet" href="' . hsc($cdn_url . $cfg['sheet']) . '" />' . PHP_EOL;
+	echo '<link rel="stylesheet" href="' . hsc($stylesheet_url) . '" />' . PHP_EOL;
 	echo '<style type="text/css">' . PHP_EOL
 		. 'body,' . PHP_EOL
 		. 'input,' . PHP_EOL

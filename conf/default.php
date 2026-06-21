@@ -6,5 +6,5 @@
 
 $conf['hideTools']    = 0;
 $conf['sidebarIsNav'] = 1;
-$conf['cdn']					= 'github';
+$conf['cdn']					= 'local';
 $conf['font']         = 'firacode';
