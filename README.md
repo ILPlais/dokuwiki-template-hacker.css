@@ -13,7 +13,7 @@ This template can be found at https://www.dokuwiki.org/template:hacker.css
 - [`template.info.txt`](template.info.txt) — theme metadata
 - [`css/hacker.css`](css/hacker.css) — main stylesheet
 - [`assets/nerd-fonts/`](assets/nerd-fonts/) — CSS font files used by the template
-- [`assets/nerd-fonts/fonts/`](assets/nerd-fonts/fonts/) — font cache directory (populated automatically in local CDN mode)
+- [`assets/nerd-fonts/fonts/`](assets/nerd-fonts/fonts/) — font cache directory (populated automatically)
 - [`lang/`](lang/) — localization files used by the template
 
 ## Installation
@@ -36,10 +36,11 @@ The easiest way to install the template is:
 
 After selecting the template, you can customize it in the **Template/Hacker** section:
 
-- **CDN** — how font files are loaded:
-  - **GitHub** or **jsDelivr** — fonts served from [Nerd Font Web Fonts](https://github.com/mshaugh/nerdfont-webfonts) (default; no extra setup)
-  - **Local** — fonts served from the template directory; missing files for the selected font are downloaded once from jsDelivr and cached on the server (~few MB per font)
 - **Main font** — choose a Nerd Font family
+
+Fonts come from the [latest release of NerdFontsToWebFonts](https://github.com/ILPlais/NerdFontsToWebFonts/releases/latest). Browsers cannot load fonts from its archives, so the server extracts the files needed by the selected font on first use (~few MB per font), caches them and serves them itself. It checks for a new release once a day.
+
+The server must be able to reach `github.com`, `api.github.com` and `release-assets.githubusercontent.com` over HTTPS, and the web server user must be able to write to `assets/nerd-fonts/fonts/`. Until the font is installed, the browser's default font is used.
 
 ## Screenshot
 
@@ -53,4 +54,4 @@ The CSS template is from the [Hacker Style Library](https://github.com/webshahab
 
 ### Nerd Fonts
 
-The [Nerd Fonts](https://www.nerdfonts.com/) for the Web is from [Nerd Font Web Fonts](https://github.com/mshaugh/nerdfont-webfonts).
+The [Nerd Fonts](https://www.nerdfonts.com/) for the Web are converted to WOFF2 by [NerdFontsToWebFonts](https://github.com/ILPlais/NerdFontsToWebFonts). The `@font-face` declarations in `assets/nerd-fonts/` are based on [Nerd Font Web Fonts](https://github.com/mshaugh/nerdfont-webfonts).

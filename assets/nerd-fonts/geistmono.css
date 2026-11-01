@@ -56,16 +56,8 @@
 }
 @font-face {
     font-family: "GeistMono Nerd Font";
-    src:    local("GeistMonoNerdFont-UltraBlack"),
-            url("fonts/GeistMonoNerdFont-UltraBlack.woff2") format("woff2");
-    font-stretch: normal;
-    font-style: normal;
-    font-weight: 900;
-}
-@font-face {
-    font-family: "GeistMono Nerd Font";
-    src:    local("GeistMonoNerdFont-UltraLight"),
-            url("fonts/GeistMonoNerdFont-UltraLight.woff2") format("woff2");
+    src:    local("GeistMonoNerdFont-ExtraLight"),
+            url("fonts/GeistMonoNerdFont-ExtraLight.woff2") format("woff2");
     font-stretch: normal;
     font-style: normal;
     font-weight: 200;
@@ -128,16 +120,8 @@
 }
 @font-face {
     font-family: "GeistMono Nerd Font Mono";
-    src:    local("GeistMonoNerdFontMono-UltraBlack"),
-            url("fonts/GeistMonoNerdFontMono-UltraBlack.woff2") format("woff2");
-    font-stretch: normal;
-    font-style: normal;
-    font-weight: 900;
-}
-@font-face {
-    font-family: "GeistMono Nerd Font Mono";
-    src:    local("GeistMonoNerdFontMono-UltraLight"),
-            url("fonts/GeistMonoNerdFontMono-UltraLight.woff2") format("woff2");
+    src:    local("GeistMonoNerdFontMono-ExtraLight"),
+            url("fonts/GeistMonoNerdFontMono-ExtraLight.woff2") format("woff2");
     font-stretch: normal;
     font-style: normal;
     font-weight: 200;
@@ -200,16 +184,8 @@
 }
 @font-face {
     font-family: "GeistMono Nerd Font Propo";
-    src:    local("GeistMonoNerdFontPropo-UltraBlack"),
-            url("fonts/GeistMonoNerdFontPropo-UltraBlack.woff2") format("woff2");
-    font-stretch: normal;
-    font-style: normal;
-    font-weight: 900;
-}
-@font-face {
-    font-family: "GeistMono Nerd Font Propo";
-    src:    local("GeistMonoNerdFontPropo-UltraLight"),
-            url("fonts/GeistMonoNerdFontPropo-UltraLight.woff2") format("woff2");
+    src:    local("GeistMonoNerdFontPropo-ExtraLight"),
+            url("fonts/GeistMonoNerdFontPropo-ExtraLight.woff2") format("woff2");
     font-stretch: normal;
     font-style: normal;
     font-weight: 200;

@@ -9,11 +9,6 @@
 
 $meta['hideTools']        = array('onoff');
 $meta['sidebarIsNav']     = array('onoff');
-$meta['cdn'] 							= array('multichoice', '_choices' =>
-	array(
-		'github',
-		'jsdelivr',
-		'local'));
 $meta['font']							= array('multichoice', '_choices' =>
 	array(
 		'0xproto',
